@@ -1,0 +1,9 @@
+Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy RemoteSigned -Force
+
+Update-Module PowerShellGet -Force
+
+Install-Module Posh-Git -Scope LocalMachine
+
+'Import-Module Posh-Git' | Out-File -Append -Encoding default -FilePath $profile
+
+. $profile
